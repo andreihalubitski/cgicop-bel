@@ -141,6 +141,11 @@ header nav ul li a:hover {
     text-align: center;
 }
 
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
 .carousel {
     display: flex;
     overflow-x: scroll;
@@ -197,6 +202,39 @@ header nav ul li a:hover {
 
 .carousel-item .read-more:hover {
     background-color: #e6b800;
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-prev img,
+.carousel-next img {
+    height: 20px;
+    width: 20px;
 }
 
 .companies {
@@ -380,5 +418,10 @@ footer p {
 
     .company-grid, .project-grid {
         grid-template-columns: 1fr;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        display: none;
     }
 }
