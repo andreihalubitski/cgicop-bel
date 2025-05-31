@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto :wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f9f9f9;
+    background-color: #f9f9f9;  
     color: #333;
 }
 
@@ -177,8 +177,9 @@ header nav ul li a:hover {
 }
 
 .carousel-item img {
-    width: 100%;
-    height: auto;
+    width: 200px; /* Фиксированная ширина */
+    height: 150px; /* Фиксированная высота */
+    object-fit: cover; /* Сохраняет пропорции и обрезает изображение при необходимости */
 }
 
 .carousel-item h3 {
@@ -324,3 +325,14 @@ footer .social-icons img {
 footer .social-icons img:hover {
     filter: brightness(0.8);
 }
+```
+
+### Объяснение изменений:
+- **`.carousel-item img`**:
+    - `width: 200px;`: Устанавливает фиксированную ширину изображений.
+    - `height: 150px;`: Устанавливает фиксированную высоту изображений.
+    - `object-fit: cover;`: Сохраняет пропорции изображений и обрезает их, если они выходят за пределы заданных размеров.
+
+Теперь все изображения в карусели будут иметь одинаковый размер 200x150 пикселей и будут корректно отображаться. Если вам нужно изменить размеры, просто обновите значения `width` и `height` в CSS.
+
+Если у вас есть дополнительные вопросы или требуется помощь с другими аспектами стилизации, дайте знать!
