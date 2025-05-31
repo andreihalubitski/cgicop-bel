@@ -162,8 +162,7 @@ header nav ul li a:hover {
 }
 
 .carousel-item {
-    width: 250px; /* Фиксированная ширина блока */
-    height: 300px; /* Фиксированная высота блока */
+    min-width: 250px;
     flex-shrink: 0;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -171,8 +170,6 @@ header nav ul li a:hover {
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
-    display: flex;
-    flex-direction: column;
 }
 
 .carousel-item:hover {
@@ -180,35 +177,27 @@ header nav ul li a:hover {
 }
 
 .carousel-item img {
-    width: 100%; /* Ширина изображения 100% от блока */
-    height: 150px; /* Фиксированная высота изображения */
+    width: 200px; /* Фиксированная ширина */
+    height: 150px; /* Фиксированная высота */
     object-fit: cover; /* Сохраняет пропорции и обрезает изображение при необходимости */
-}
-
-.carousel-item .content {
-    flex: 1; /* Занимает оставшееся пространство */
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .carousel-item h3 {
     font-size: 1.5em;
-    margin: 0;
+    margin: 20px;
     text-align: center;
 }
 
 .carousel-item p {
     font-size: 1em;
-    margin: 0;
+    margin: 0 20px 20px;
     text-align: center;
 }
 
 .carousel-item .read-more {
     display: block;
     text-align: center;
-    margin: 0;
+    margin: 0 20px 20px;
     padding: 10px 20px;
     background-color: #ffcc00;
     color: #333;
