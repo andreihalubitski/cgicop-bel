@@ -3,145 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная страница</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>CGICOP-Bel</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo">Логотип</div>
+            <img src="images/logo.png" alt="Логотип CGICOP-Bel" class="logo">
             <nav>
                 <ul>
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Компании</a></li>
-                    <li><a href="#">Проекты</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
-    <section class="hero">
-        <div class="container">
-            <h1>Добро пожаловать на наш сайт</h1>
-            <p>Мы предлагаем лучшие услуги для вас.</p>
-            <a href="#" class="btn">Узнать больше</a>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Добро пожаловать в CGICOP-Bel</h1>
+                <p>Мы предоставляем высококачественные услуги в области информационных технологий.</p>
+            </div>
             <div class="contact-form">
-                <form>
+                <h3>Свяжитесь с нами</h3>
+                <form action="#" method="post">
                     <label for="name">Имя:</label>
                     <input type="text" id="name" name="name" required>
+                    
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
+                    
                     <label for="message">Сообщение:</label>
-                    <textarea id="message" name="message" required></textarea>
-                    <button type="submit">Отправить</button>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <button type="submit">Оставить заявку</button>
                 </form>
             </div>
-        </div>
-    </section>
-
-    <section class="services">
-        <div class="container">
-            <h2>Наши услуги</h2>
-            <div class="carousel-container">
-                <div class="carousel-item">
-                    <img src="images/service1.jpg" alt="Услуга 1">
-                    <div class="content">
-                        <h3>Услуга 1</h3>
-                        <p>Краткое описание услуги 1. Здесь можно написать больше информации о услуге.</p>
-                        <a href="#" class="read-more">Подробнее</a>
+        </section>
+        <section class="about">
+            <div class="container">
+                <h2>О нас</h2>
+                <p>CGICOP-Bel — это профессиональная IT-компания, основанная в 2010 году. Мы специализируемся на разработке программного обеспечения, внедрении облачных решений и предоставлении консалтинговых услуг для бизнеса. Наша команда состоит из опытных специалистов, которые стремятся предоставить качественные и индивидуальные решения для каждого клиента.</p>
+            </div>
+        </section>
+        <section class="services">
+            <div class="container">
+                <h2>Наши услуги</h2>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="images/service1.jpg" alt="Услуга 1">
+                        <h3>Разработка ПО</h3>
+                        <p>Профессиональная разработка программного обеспечения для различных целей.</p>
+                        <a href="services.html#service1" class="read-more">Перейти</a>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="images/service2.jpg" alt="Услуга 2">
-                    <div class="content">
-                        <h3>Услуга 2</h3>
-                        <p>Краткое описание услуги 2. Здесь можно написать больше информации о услуге.</p>
-                        <a href="#" class="read-more">Подробнее</a>
+                    <div class="carousel-item">
+                        <img src="images/service2.jpg" alt="Услуга 2">
+                        <h3>Облачные решения</h3>
+                        <p>Решения на основе облачных технологий для повышения гибкости и безопасности данных.</p>
+                        <a href="services.html#service2" class="read-more">Перейти</a>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="images/service3.jpg" alt="Услуга 3">
-                    <div class="content">
-                        <h3>Услуга 3</h3>
-                        <p>Краткое описание услуги 3. Здесь можно написать больше информации о услуге.</p>
-                        <a href="#" class="read-more">Подробнее</a>
+                    <div class="carousel-item">
+                        <img src="images/service3.jpg" alt="Услуга 3">
+                        <h3>Консалтинг</h3>
+                        <p>Экспертные рекомендации по внедрению и оптимизации IT-решений.</p>
+                        <a href="services.html#service3" class="read-more">Перейти</a>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="images/service4.jpg" alt="Услуга 4">
-                    <div class="content">
-                        <h3>Услуга 4</h3>
-                        <p>Краткое описание услуги 4. Здесь можно написать больше информации о услуге.</p>
-                        <a href="#" class="read-more">Подробнее</a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="images/service5.jpg" alt="Услуга 5">
-                    <div class="content">
-                        <h3>Услуга 5</h3>
-                        <p>Краткое описание услуги 5. Здесь можно написать больше информации о услуге.</p>
-                        <a href="#" class="read-more">Подробнее</a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="images/service6.jpg" alt="Услуга 6">
-                    <div class="content">
-                        <h3>Услуга 6</h3>
-                        <p>Краткое описание услуги 6. Здесь можно написать больше информации о услуге.</p>
-                        <a href="#" class="read-more">Подробнее</a>
+                    <div class="carousel-item">
+                        <img src="images/service4.jpg" alt="Услуга 4">
+                        <h3>Поддержка</h3>
+                        <p>Круглосуточная техническая поддержка для вашего бизнеса.</p>
+                        <a href="services.html#service4" class="read-more">Перейти</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="companies">
-        <div class="container">
-            <h2>Наши компании</h2>
-            <div class="company-grid">
-                <div class="company-card">
-                    <img src="images/company1.jpg" alt="Компания 1">
-                    <h3>Компания 1</h3>
-                    <p>Краткое описание компании 1.</p>
+        </section>
+        <section class="companies">
+            <div class="container">
+                <h2>Дочерние компании</h2>
+                <div class="company-grid">
+                    <div class="company-card">
+                        <img src="images/company1.jpg" alt="Компания 1">
+                        <h3>Компания 1</h3>
+                        <p>Краткое описание компании 1.</p>
+                        <a href="companies/company1.html" class="read-more">Подробнее</a>
+                    </div>
+                    <div class="company-card">
+                        <img src="images/company2.jpg" alt="Компания 2">
+                        <h3>Компания 2</h3>
+                        <p>Краткое описание компании 2.</p>
+                        <a href="companies/company2.html" class="read-more">Подробнее</a>
+                    </div>
+                    <div class="company-card">
+                        <img src="images/company3.jpg" alt="Компания 3">
+                        <h3>Компания 3</h3>
+                        <p>Краткое описание компании 3.</p>
+                        <a href="companies/company3.html" class="read-more">Подробнее</a>
+                    </div>
+                    <div class="company-card">
+                        <img src="images/company4.jpg" alt="Компания 4">
+                        <h3>Компания 4</h3>
+                        <p>Краткое описание компании 4.</p>
+                        <a href="companies/company4.html" class="read-more">Подробнее</a>
+                    </div>
+                    <div class="company-card">
+                        <img src="images/company5.jpg" alt="Компания 5">
+                        <h3>Компания 5</h3>
+                        <p>Краткое описание компании 5.</p>
+                        <a href="companies/company5.html" class="read-more">Подробнее</a>
+                    </div>
+                    <div class="company-card">
+                        <img src="images/company6.jpg" alt="Компания 6">
+                        <h3>Компания 6</h3>
+                        <p>Краткое описание компании 6.</p>
+                        <a href="companies/company6.html" class="read-more">Подробнее</a>
+                    </div>
                 </div>
-                <div class="company-card">
-                    <img src="images/company2.jpg" alt="Компания 2">
-                    <h3>Компания 2</h3>
-                    <p>Краткое описание компании 2.</p>
-                </div>
-                <!-- Добавьте другие компании по аналогии -->
             </div>
-        </div>
-    </section>
-
-    <section class="projects">
-        <div class="container">
-            <h2>Наши проекты</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <img src="images/project1.jpg" alt="Проект 1">
-                    <h3>Проект 1</h3>
-                    <p>Краткое описание проекта 1.</p>
+        </section>
+        <section class="projects">
+            <div class="container">
+                <h2>Наши проекты в других странах</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <img src="images/project1.jpg" alt="Проект 1">
+                        <h3>Проект 1</h3>
+                        <p>Краткое описание проекта 1.</p>
+                        <a href="projects/project1.html" class="read-more">Подробнее</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/project2.jpg" alt="Проект 2">
+                        <h3>Проект 2</h3>
+                        <p>Краткое описание проекта 2.</p>
+                        <a href="projects/project2.html" class="read-more">Подробнее</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/project3.jpg" alt="Проект 3">
+                        <h3>Проект 3</h3>
+                        <p>Краткое описание проекта 3.</p>
+                        <a href="projects/project3.html" class="read-more">Подробнее</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/project4.jpg" alt="Проект 4">
+                        <h3>Проект 4</h3>
+                        <p>Краткое описание проекта 4.</p>
+                        <a href="projects/project4.html" class="read-more">Подробнее</a>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <img src="images/project2.jpg" alt="Проект 2">
-                    <h3>Проект 2</h3>
-                    <p>Краткое описание проекта 2.</p>
-                </div>
-                <!-- Добавьте другие проекты по аналогии -->
             </div>
-        </div>
-    </section>
-
+        </section>
+    </main>
     <footer>
         <div class="container">
-            <p>&copy; 2023 Ваша компания. Все права защищены.</p>
+            <p>&copy; 2023 CGICOP-Bel</p>
             <div class="social-icons">
-                <img src="images/facebook.png" alt="Facebook">
-                <img src="images/twitter.png" alt="Twitter">
-                <img src="images/instagram.png" alt="Instagram">
+                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
             </div>
         </div>
     </footer>
