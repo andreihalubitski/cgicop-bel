@@ -22,7 +22,7 @@ body {
 }
 
 header {
-    background-color: #fff;
+    background-color: var(--primary-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
 }
@@ -44,7 +44,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #333;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -134,8 +134,9 @@ header nav ul li a:hover {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 33.33%;
     height: 2px;
     background-color: var(--primary-color);
 }
@@ -156,8 +157,9 @@ header nav ul li a:hover {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 33.33%;
     height: 2px;
     background-color: var(--primary-color);
 }
@@ -296,8 +298,9 @@ header nav ul li a:hover {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 33.33%;
     height: 2px;
     background-color: var(--primary-color);
 }
@@ -377,8 +380,9 @@ header nav ul li a:hover {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 33.33%;
     height: 2px;
     background-color: var(--primary-color);
 }
@@ -449,7 +453,8 @@ header nav ul li a:hover {
 }
 
 footer {
-    background-color: #fff;
+    background-color: var(--primary-color);
+    color: #fff;
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
@@ -516,5 +521,13 @@ footer p {
     .carousel-prev,
     .carousel-next {
         display: none;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    footer .social-icons {
+        margin-top: 10px;
     }
 }
