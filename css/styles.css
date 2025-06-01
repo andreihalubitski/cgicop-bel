@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+:root {
+    --primary-color: #0056b3; /* Современный синий */
+    --accent-color: #ff9900; /* Оранжевый для акцентов */
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -46,7 +51,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #ffcc00;
+    color: var(--accent-color);
 }
 
 .hero {
@@ -98,15 +103,15 @@ header nav ul li a:hover {
 
 .hero .contact-form input:focus,
 .hero .contact-form textarea:focus {
-    border-color: #ffcc00;
+    border-color: var(--accent-color);
 }
 
 .hero .contact-form button {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #ffcc00;
-    color: #333;
+    background-color: var(--accent-color);
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
@@ -116,12 +121,23 @@ header nav ul li a:hover {
 }
 
 .hero .contact-form button:hover {
-    background-color: #e6b800;
+    background-color: #e67300;
 }
 
 .about {
     padding: 50px 0;
     background-color: #fff;
+    position: relative;
+}
+
+.about::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
 }
 
 .about h2 {
@@ -133,6 +149,17 @@ header nav ul li a:hover {
 .services {
     padding: 50px 0;
     background-color: #fff;
+    position: relative;
+}
+
+.services::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
 }
 
 .services h2 {
@@ -156,6 +183,10 @@ header nav ul li a:hover {
     scrollbar-width: none;  /* Firefox */
 }
 
+.carousel.dragging {
+    cursor: grab;
+}
+
 .carousel::-webkit-scrollbar {
     display: none;  /* Chrome, Safari and Opera */
 }
@@ -168,6 +199,24 @@ header nav ul li a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+.carousel-item:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+.carousel-item:nth-child(even) {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .carousel-item:hover {
@@ -192,8 +241,8 @@ header nav ul li a:hover {
 .carousel-item .read-more {
     display: inline-block;
     padding: 5px 10px;
-    background-color: #ffcc00;
-    color: #333;
+    background-color: var(--accent-color);
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
@@ -201,7 +250,7 @@ header nav ul li a:hover {
 }
 
 .carousel-item .read-more:hover {
-    background-color: #e6b800;
+    background-color: #e67300;
 }
 
 .carousel-prev,
@@ -240,6 +289,17 @@ header nav ul li a:hover {
 .companies {
     padding: 50px 0;
     background-color: #fff;
+    position: relative;
+}
+
+.companies::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
 }
 
 .companies h2 {
@@ -260,6 +320,17 @@ header nav ul li a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+.company-card:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+.company-card:nth-child(even) {
+    animation-delay: 0.4s;
 }
 
 .company-card:hover {
@@ -284,8 +355,8 @@ header nav ul li a:hover {
 .company-card .read-more {
     display: inline-block;
     padding: 5px 10px;
-    background-color: #ffcc00;
-    color: #333;
+    background-color: var(--accent-color);
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
@@ -293,12 +364,23 @@ header nav ul li a:hover {
 }
 
 .company-card .read-more:hover {
-    background-color: #e6b800;
+    background-color: #e67300;
 }
 
 .projects {
     padding: 50px 0;
     background-color: #fff;
+    position: relative;
+}
+
+.projects::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
 }
 
 .projects h2 {
@@ -319,6 +401,17 @@ header nav ul li a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+.project-card:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(even) {
+    animation-delay: 0.4s;
 }
 
 .project-card:hover {
@@ -343,8 +436,8 @@ header nav ul li a:hover {
 .project-card .read-more {
     display: inline-block;
     padding: 5px 10px;
-    background-color: #ffcc00;
-    color: #333;
+    background-color: var(--accent-color);
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
@@ -352,7 +445,7 @@ header nav ul li a:hover {
 }
 
 .project-card .read-more:hover {
-    background-color: #e6b800;
+    background-color: #e67300;
 }
 
 footer {
