@@ -4,9 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const prevButton = document.querySelector('.carousel-prev');
     const nextButton = document.querySelector('.carousel-next');
     let currentIndex = 0;
+    let isDragging = false;
+    let startX;
+    let scrollLeft;
+    let isHovered = false;
 
     function updateCarousel() {
-        carousel.style.transform = `translateX(-${currentIndex * 320}px)`;
+        carousel.style.transform = `translateX(-${currentIndex * 340}px)`;
     }
 
     prevButton.addEventListener('click', () => {
@@ -22,11 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
             updateCarousel();
         }
     });
-});
-    const carousel = document.querySelector('.carousel');
-    let isDragging = false;
-    let startX;
-    let scrollLeft;
 
     carousel.addEventListener('mousedown', (e) => {
         isDragging = true;
@@ -53,9 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
         carousel.scrollLeft = scrollLeft - walk;
     });
 
-    // Auto-scroll functionality
-    let isHovered = false;
-
     carousel.addEventListener('mouseenter', () => {
         isHovered = true;
     });
@@ -65,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function autoScroll() {
-        if (!isHovered) {
+        if (!isHovered && !isDragging) {
             carousel.scrollLeft += 1; // Adjust the speed of scrolling
         }
         requestAnimationFrame(autoScroll);
