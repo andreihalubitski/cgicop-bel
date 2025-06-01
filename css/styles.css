@@ -26,6 +26,9 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header .logo {
@@ -34,9 +37,7 @@ header .logo {
 
 header .burger-menu {
     display: none;
-    position: absolute;
-    top: 10px;
-    right: 20px;
+    position: relative;
     background: none;
     border: none;
     cursor: pointer;
@@ -585,6 +586,10 @@ footer p {
 
     header nav ul {
         display: none;
+    }
+
+    header .logo {
+        margin-left: auto;
     }
 
     .about .about-content {
