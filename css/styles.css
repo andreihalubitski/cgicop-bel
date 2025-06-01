@@ -19,6 +19,9 @@ body {
     margin: 0 auto;
     padding: 20px;
     max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header {
@@ -26,8 +29,6 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
     position: relative;
-    display: flex;
-    align-items: center;
 }
 
 header .logo {
@@ -40,7 +41,7 @@ header .burger-menu {
     background: none;
     border: none;
     cursor: pointer;
-    margin-right: auto;
+    margin-right: 20px;
 }
 
 header .burger-menu img {
@@ -252,7 +253,7 @@ header nav ul li a:hover {
 }
 
 .carousel::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari and Opera */
+    display: none;  /* Chrome, Safari и Opera */
 }
 
 .carousel-item {
@@ -607,14 +608,7 @@ footer p {
         left: 30px;
     }
 
-    .mobile-nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s ease;
-    }
-
-    .mobile-nav ul li a:hover {
-        color: var(--accent-color);
+    .mobile-nav {
+        display: block;
     }
 }
