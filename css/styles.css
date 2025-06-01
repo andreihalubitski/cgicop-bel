@@ -147,6 +147,51 @@ header nav ul li a:hover {
     text-align: center;
 }
 
+.about .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-image {
+    position: relative;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.about .about-image .background-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about .about-image .foreground-image {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 80%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.about .about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about .about-text h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about .about-text p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
 .services {
     padding: 50px 0;
     background-color: #fff;
@@ -523,11 +568,17 @@ footer p {
         display: none;
     }
 
-    footer {
-        text-align: center;
+    .about .about-content {
+        flex-direction: column;
     }
 
-    footer .social-icons {
-        margin-top: 10px;
+    .about .about-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .about .about-image .foreground-image {
+        top: 30px;
+        left: 30px;
     }
 }
