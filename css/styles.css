@@ -27,7 +27,6 @@ header {
     padding: 10px 0;
     position: relative;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -41,6 +40,7 @@ header .burger-menu {
     background: none;
     border: none;
     cursor: pointer;
+    margin-right: auto;
 }
 
 header .burger-menu img {
@@ -547,7 +547,8 @@ footer p {
     left: 0;
     width: 80%;
     height: 100%;
-    background-color: #fff;
+    background-color: var(--primary-color); /* Фирменный синий фон */
+    color: #fff;
     box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
     padding: 50px 20px;
     transform: translateX(-100%);
@@ -568,7 +569,7 @@ footer p {
 }
 
 .mobile-nav ul li a {
-    color: #333;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
