@@ -83,4 +83,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', checkVisibility);
     window.addEventListener('load', checkVisibility);
+
+    // Mobile menu toggle
+    const burgerMenu = document.querySelector('.burger-menu');
+    const mobileNav = document.querySelector('.mobile-nav');
+
+    burgerMenu.addEventListener('click', () => {
+        mobileNav.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!mobileNav.contains(e.target) && !burgerMenu.contains(e.target)) {
+            mobileNav.classList.remove('active');
+        }
+    });
 });
