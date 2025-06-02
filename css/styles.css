@@ -49,7 +49,6 @@ header .container {
     font-weight: bold;
 }
 
-/* Стили для секции hero */
 .hero {
     background-image: url('../images/hero-banner.jpg'); /* Путь к изображению */
     background-size: cover;
@@ -83,41 +82,45 @@ header .container {
     color: white;
     padding: 20px;
     border-radius: 8px;
-    max-width: 300px;
-    margin: 0 100px 0 auto; /* Сдвиг вправо с отступом 100px от правого края */
+    max-width: 400px;
+    margin: 0 20px 0 auto; /* Сдвиг вправо с отступом 20px от правого края */
 }
 
-.hero .contact-form h3 {
-    margin-bottom: 10px;
+/* Стили для контейнера формы */
+.contact-form .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Выравнивание по центру */
+    gap: 10px; /* Отступ между элементами */
 }
 
-.hero .contact-form label {
-    display: block;
-    margin-bottom: 5px;
+.contact-form label {
+    font-weight: bold; /* Увеличиваем жирность заголовков полей */
+    margin-bottom: 5px; /* Маленький отступ между меткой и полем ввода */
 }
 
-.hero .contact-form input,
-.hero .contact-form textarea {
-    width: 100%;
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Занимает всю ширину контейнера */
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-.hero .contact-form button {
+.contact-form button {
     background-color: #007BFF; /* Фирменный синий цвет */
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
+    width: 100%; /* Занимает всю ширину контейнера */
 }
 
-.hero .contact-form button:hover {
+.contact-form button:hover {
     background-color: #0056b3; /* Темнее синий при наведении */
 }
-
 .hero .watermark {
     position: absolute;
     top: 50%;
