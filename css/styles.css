@@ -128,7 +128,7 @@ header .container {
 }
 
 .hero .watermark-logo {
-    max-width: 150px; /* Размер логотипа */
+    max-width: 800px; /* Размер логотипа */
     height: auto;
 }
 
