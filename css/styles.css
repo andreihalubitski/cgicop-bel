@@ -85,6 +85,7 @@ header .container {
     border-radius: 8px;
     max-width: 400px;
     margin: 0;
+    margin-left: auto; /* Сдвинуть форму вправо */
 }
 
 .hero .contact-form h3 {
@@ -116,6 +117,21 @@ header .container {
 
 .hero .contact-form button:hover {
     background-color: #0056b3; /* Темнее синий при наведении */
+}
+
+/* Водяной знак */
+.watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0.3; /* Прозрачность водяного знака */
+}
+
+.watermark-logo {
+    height: 100px; /* Размер логотипа */
+    width: auto;
 }
 
 /* Стили для секции about */
@@ -436,6 +452,7 @@ footer .container {
     .hero .contact-form {
         max-width: 100%;
         margin-top: 20px;
+        margin-left: 0; /* Сбросить отступы для мобильных устройств */
     }
 
     .about-content {
