@@ -14,33 +14,6 @@ body {
     color: #333;
 }
 
-/* Стили для баннера */
-.banner {
-    background-image: url('../images/banner.jpg'); /* Путь к изображению */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white; /* Цвет текста */
-    padding: 100px 0; /* Вертикальные отступы для текста */
-    text-align: center; /* Центрирование текста */
-    position: relative; /* Для абсолютного позиционирования текста */
-}
-
-.banner h1, .banner p {
-    z-index: 1; /* Убедитесь, что текст находится поверх изображения */
-    position: relative;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    max-width: 1200px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 header {
     background-color: var(--primary-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
