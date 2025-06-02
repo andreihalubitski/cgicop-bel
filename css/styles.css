@@ -84,7 +84,7 @@ header .container {
     padding: 20px;
     border-radius: 8px;
     max-width: 300px;
-    margin: 0 100px 0 auto; /* Сдвиг вправо с отступом 20px от правого края */
+    margin: 0 100px 0 auto; /* Сдвиг вправо с отступом 100px от правого края */
 }
 
 .hero .contact-form h3 {
