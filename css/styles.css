@@ -14,6 +14,23 @@ body {
     color: #333;
 }
 
+/* Стили для баннера */
+.banner {
+    background-image: url('../images/banner.jpg'); /* Путь к изображению */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* Цвет текста */
+    padding: 100px 0; /* Вертикальные отступы для текста */
+    text-align: center; /* Центрирование текста */
+    position: relative; /* Для абсолютного позиционирования текста */
+}
+
+.banner h1, .banner p {
+    z-index: 1; /* Убедитесь, что текст находится поверх изображения */
+    position: relative;
+}
+
 .container {
     width: 80%;
     margin: 0 auto;
