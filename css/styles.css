@@ -84,8 +84,7 @@ header .container {
     padding: 20px;
     border-radius: 8px;
     max-width: 400px;
-    margin: 0;
-    margin-left: auto; /* Сдвинуть форму вправо */
+    margin: 0 20px 0 auto; /* Сдвиг вправо с отступом 20px от правого края */
 }
 
 .hero .contact-form h3 {
@@ -119,19 +118,18 @@ header .container {
     background-color: #0056b3; /* Темнее синий при наведении */
 }
 
-/* Водяной знак */
-.watermark {
+.hero .watermark {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 0;
-    opacity: 0.3; /* Прозрачность водяного знака */
+    opacity: 0.4; /* Прозрачность 40% */
+    z-index: 0; /* Нижний уровень для водяного знака */
 }
 
-.watermark-logo {
-    height: 100px; /* Размер логотипа */
-    width: auto;
+.hero .watermark-logo {
+    max-width: 150px; /* Размер логотипа */
+    height: auto;
 }
 
 /* Стили для секции about */
@@ -452,7 +450,13 @@ footer .container {
     .hero .contact-form {
         max-width: 100%;
         margin-top: 20px;
-        margin-left: 0; /* Сбросить отступы для мобильных устройств */
+        margin-right: 0;
+    }
+
+    .hero .watermark {
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .about-content {
