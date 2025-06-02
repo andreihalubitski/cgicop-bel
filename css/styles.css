@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #007BFF; /* Фирменный синий цвет */
     color: white;
     text-align: center;
     padding: 1em 0;
@@ -25,6 +25,7 @@ header .container {
     background: none;
     border: none;
     cursor: pointer;
+    display: none; /* Скрыть бургер-меню по умолчанию */
 }
 
 .logo {
@@ -67,6 +68,9 @@ header .container {
     padding: 0 20px;
     position: relative;
     z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .hero h1, .hero p {
@@ -78,10 +82,9 @@ header .container {
     background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для формы */
     color: white;
     padding: 20px;
-    margin-top: 20px;
     border-radius: 8px;
     max-width: 400px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .hero .contact-form h3 {
@@ -103,7 +106,7 @@ header .container {
 }
 
 .hero .contact-form button {
-    background-color: #4CAF50;
+    background-color: #007BFF; /* Фирменный синий цвет */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -112,7 +115,7 @@ header .container {
 }
 
 .hero .contact-form button:hover {
-    background-color: #45a049;
+    background-color: #0056b3; /* Темнее синий при наведении */
 }
 
 /* Стили для секции about */
@@ -217,7 +220,7 @@ header .container {
 
 .carousel-item .read-more {
     display: inline-block;
-    background-color: #4CAF50;
+    background-color: #007BFF; /* Фирменный синий цвет */
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -225,7 +228,7 @@ header .container {
 }
 
 .carousel-item .read-more:hover {
-    background-color: #45a049;
+    background-color: #0056b3; /* Темнее синий при наведении */
 }
 
 .carousel-prev,
@@ -295,7 +298,7 @@ header .container {
 
 .company-card .read-more {
     display: inline-block;
-    background-color: #4CAF50;
+    background-color: #007BFF; /* Фирменный синий цвет */
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -303,7 +306,7 @@ header .container {
 }
 
 .company-card .read-more:hover {
-    background-color: #45a049;
+    background-color: #0056b3; /* Темнее синий при наведении */
 }
 
 /* Стили для секции projects */
@@ -354,7 +357,7 @@ header .container {
 
 .project-card .read-more {
     display: inline-block;
-    background-color: #4CAF50;
+    background-color: #007BFF; /* Фирменный синий цвет */
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -362,7 +365,7 @@ header .container {
 }
 
 .project-card .read-more:hover {
-    background-color: #45a049;
+    background-color: #0056b3; /* Темнее синий при наведении */
 }
 
 /* Стили для футера */
@@ -404,11 +407,14 @@ footer .container {
 
     .burger-menu {
         margin-bottom: 10px;
+        display: block; /* Показать бургер-меню на мобильных устройствах */
     }
 
     .mobile-nav ul {
         flex-direction: column;
         align-items: flex-start;
+        display: none; /* Скрыть мобильное меню по умолчанию */
+        margin-top: 10px;
     }
 
     .mobile-nav ul li {
@@ -429,6 +435,7 @@ footer .container {
 
     .hero .contact-form {
         max-width: 100%;
+        margin-top: 20px;
     }
 
     .about-content {
@@ -443,5 +450,36 @@ footer .container {
 
     .about-image .foreground-image {
         width: 80%;
+    }
+
+    .carousel-container {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+
+    .carousel {
+        display: inline-flex;
+        flex-wrap: nowrap;
+    }
+
+    .carousel-item {
+        min-width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        display: none;
+    }
+
+    .company-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
     }
 }
